@@ -34,5 +34,8 @@ let peliculas = listaPeliculas
 console.log(peliculas[0].titulo)
 let contenido = document.getElementById("lisa");
 peliculas.forEach((pelicula)=>{
-    
+    let carta = document.createElement('div');
+    carta.classList.add('col');
+    carta.innerHTML= "<img src=" + pelicula.img + ">" +"<h2>"+ pelicula.titulo + "</h2>" + "<p>"+ "("+ pelicula.estreno +")" +"</p>" + "<p class='numero'>"+ pelicula.puesto +"</p>";
+    contenido.appendChild(carta)
 })
